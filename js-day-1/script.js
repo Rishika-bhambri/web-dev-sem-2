@@ -1,0 +1,27 @@
+// TDZ: when we declare the variable with let and const without its proper initialization 
+// then the variable lies in temporal dead zone until its proper initialization.
+
+// Q1.
+let marks = [32, 11, 7, 24, 19, 35, 10, 0, 15, 17];
+
+let res = marks.filter((x) => {
+    if (x >= 16) {
+        console.log(x, "pass");
+    } else {
+        console.log(x, "fail");
+    }
+});
+
+// Q2. find the sum of all the elements inside an array with for loop.
+let arr = [1, 2, 3, 4, 5];
+let sum = 0;
+for (let i = 0; i < arr.length; i++) {
+    sum = sum + arr[i];
+}
+console.log("Sum using loop:", sum);
+
+// using reduce method
+
+let myArr = [1, 2, 3, 4, 5];
+let finalRes = myArr.reduce((acc, current) => acc + current);
+console.log("Sum using reduce:", finalRes);
